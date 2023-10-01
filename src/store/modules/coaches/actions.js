@@ -1,5 +1,6 @@
 export default {
   async registerCoach(context, data) {
+    console.log(context)
     const userId = context.rootGetters.userId;
     const coachData = {
       firstName: data.first,
