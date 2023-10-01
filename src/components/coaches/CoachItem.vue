@@ -6,8 +6,8 @@
       <base-badge v-for="area in areas" :key="area" :type="area" :title="area"></base-badge>
     </div>
     <div class="actions">
-      <base-button link mode="outline" :to="coachContactlink">Contact</base-button>
-      <base-button link :to="coachDetailsLink">Vuew Details</base-button>
+      <base-button mode="outline" link :to="coachContactLink">Contact</base-button>
+      <base-button link :to="coachDetailsLink">View Details</base-button>
     </div>
   </li>
 </template>
@@ -17,16 +17,16 @@ export default {
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
-      return this.firstName + ' ' + this.lastName
+      return this.firstName + ' ' + this.lastName;
     },
-    coachContactlink() {
-      return this.$route.path + '/' + this.id + '/contact'
+    coachContactLink() {
+      return this.$route.path + '/' + this.id + '/contact'; // /coaches/c1/contact
     },
     coachDetailsLink() {
-      return this.$route.path + '/' + this.id
-    }
-  }
-}
+      return this.$route.path + '/' + this.id; // /coaches/c1
+    },
+  },
+};
 </script>
 
 <style scoped>

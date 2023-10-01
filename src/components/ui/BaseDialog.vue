@@ -98,7 +98,7 @@ menu {
   margin: 0;
 }
 
-.dialog-enter-from, 
+.dialog-enter-from,
 .dialog-leave-to {
   opacity: 0;
   transform: scale(0.8);
